@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>portpolio</title>
+  <link rel="stylesheet" href="./css/jquery.fullpage.min.css" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/main.css" />
+
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/jquery.fullpage.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/script.js"></script>
+</head>
+
+
+
+<body>
+  <a href="#container" class="skip hidden">본문 바로가기</a>
+  <hr />
+
+  <!-- s: header -->
+  <header id="header">
+    <nav>
+      <h1 class="logo"><a href="index.html">Jooeun's</a></h1>
+      <ul class="gnb">
+        <li data-menuanchor="profile"><a href="#profile">profile</a></li>
+        <li data-menuanchor="project"><a href="#project">project</a></li>
+        <li data-menuanchor="process"><a href="#process">process</a></li>
+        <li data-menuanchor="contact"><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <hr />
+  <!-- //e: header -->
+
+  <!-- s: main -->
+  <main id="fullpage">
+    <section class="section visual">
+      <h1 class="hidden">portpolio</h1>
+      <div class="video">
+        <video src="./logo.webm" autoplay loop muted></video>
+      </div>
+      <figure><img src="./img/point.png" alt="" /></figure>
+    </section>
+
+    <section class="section profile">
+      <div class="frame">
+        <!-- 슬라이드 번호 -->
+        <div class="slide-num">1</div>
+        <ul class="menu">
+          <li><a href="#">Personality</a></li>
+          <li><a href="#">About me</a></li>
+          <li><a href="#">Skill</a></li>
+        </ul>
+        <div class="main-slider">
+          <div class="slide" data-anchor="slide1">
+            <div class="wrap-info">
+              <div class="wrap-info-text">
+                <h2>"사용자의 편리한 여정에 도움을 주는</h2>
+                <h3><b>디자이너</b> <strong>임주은</strong> 입니다"</h3>
+
+                <p>
+                  저는 웹사이트의 사소한 불편함들을 보면서 '어떻게 하면 이걸 더 편리하게 만들 수 있을까?' 라는 <br />
+                  생각을 많이 하곤 했습니다. 저는 디자인이 단순히 시각적인 아름다움을 추구하는 것이 아니라, <br />
+                  사용자의 삶을 더 편리하고 행복하게 만드는 과정이라고 생각합니다. 그래서 디자인을 할 때 <br />
+                  제일 먼저 사용자 중심의 디자인을 최우선으로 하며, 사용자의 입장에서 생각하고 디자인에 <br />
+                  반영하려고 노력합니다.
+                </p>
+                <p>
+                  앞으로도 저는 더 나은 사용자 경험을 만들어가고 싶습니다. 사용자의 여정에서 작은 부분이라도 <br />
+                  도움이 될 수 있다면 그것만으로도 큰 보람을 느낄 것같습니다. 감사합니다.
+                </p>
+              </div>
+              <ul>
+                <li>
+                  <figure><img src="./img/profile.jpg" alt="profile" /></figure>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="slide" data-anchor="slide2">
+            <div class="wrap-info2">
+              <div class="wrap-text">
+                <h4>임주은</h4>
+                <div class="wrap-info-text2">
+                  <dl>
+                    <dt>Brith</dt>
+                    <dd>2000.06.11</dd>
+                    <dt>Phone</dt>
+                    <dd>010.9294.8385</dd>
+                    <dt>E-mail</dt>
+                    <dd>imjuen@naver.com</dd>
+                  </dl>
+                  <dl>
+                    <dt>Education</dt>
+                    <dd>
+                      24.07 하이미디어아카데미 <br />
+                      <b>(UI/UX 반응형 웹디자인&웹퍼블리셔 양성과정 수료)</b>
+                    </dd>
+                    <dd>24.07 하이미디어아카데미</dd>
+                    <dt>Carrer</dt>
+                    <dd>
+                      23.02 퍼스트액터스<br />
+                      22.08 (주)아이크레이티브
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <ul>
+                <li>
+                  <figure><img src="./img/profile.jpg" alt="profile" /></figure>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="slide" data-anchor="slide3">
+            <div class="info">>
+              <dl>
+                <dt>Photoshop</dt>
+                <dd>
+                  사진 합성 및 보정 기법과 다양한 툴을 활용해 <br />
+                  원하는 작업이 가능하며 페이지 레이아웃 구성 및
+                  원하는 결과물로 제작이 가능합니다.
+                </dd>
+                <dt>VS CODE</dt>
+                <dd>
+                  HTML의 기본 구조를 파악하고 있어, <br />
+                  웹표준에 맡게 디자인 구현이 가능하며
+                  <br />CSS와 JQUERY를 이용한 <br />
+                  코딩 및 퍼블리싱이 가능합니다.
+                </dd>
+                <dt>illustrator</dt>
+                <dd>
+                  아이콘, 로고 제작 및 도형을 활용한 <br />
+                  그래픽 아트 등 벡터 이미지를 필요로 하는 <br />
+                  다양한 작업이 가능합니다.
+                </dd>
+                <dt>Figma</dt>
+                <dd>
+                  웹페이지 디자인, 모바일 UX/UI 구현이 <br />
+                  가능하며 간단한 인터랙션이 가능합니다.
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project">
+      <h1 class="hidden">project</h1>
+      <div class="wrap">
+        <ul>
+          <li>
+            <figure>
+              <a href="project.html" target="_blank"><img src="./img/ico1.png" alt="" /></a>
+            </figure>
+            <p>RWD</p>
+          </li>
+          <li>
+            <figure>
+              <a href="#"><img src="./img/ico2.png" alt="" /></a>
+            </figure>
+            <p>Redesign</p>
+          </li>
+          <li>
+            <figure>
+              <a href="#"><img src="./img/ico3.png" alt="" /></a>
+            </figure>
+            <p>App-Design</p>
+          </li>
+          <li>
+            <figure>
+              <a href="#"><img src="./img/ico4.png" alt="" /></a>
+            </figure>
+            <p>Microsite</p>
+          </li>
+          <li>
+            <figure>
+              <a href="#"><img src="./img/ico5.png" alt="" /></a>
+            </figure>
+            <p>Graphic design</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section process fp-auto-height">]
+      <div style="height:200vh">
+        process
+      </div>
+    </section>
+
+    <div id="footer" class="section contact fp-auto-height">
+      contact
+    </div>
+  </main>
+  <div class="cursor"></div>
+</body>
+
+</html>
