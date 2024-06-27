@@ -137,7 +137,7 @@ dl dd {
 
 main section:last-child {
   position: relative;
-  background: url(../img/slider-img.png) no-repeat 100% 170% / contain;
+  background: #fff url(../img/slider-img.png) no-repeat 100% 170% / contain;
 }
 
 .Graphic-design h1 {

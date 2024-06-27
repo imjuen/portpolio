@@ -106,6 +106,22 @@ $(function () {
     afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
       console.log(anchorLink, index, slideAnchor, slideIndex);
 
+      const skillCircle = document.querySelectorAll('.circle');
+
+      skillCircle.forEach((circle, index) => {
+        const skillValue = circle.getAttribute('data-skill');
+        const delayTime = index * 0.4;
+
+        const waves = circle.querySelectorAll('.wave');
+        waves.forEach((wave) => {
+          gsap.to(wave, {
+            top: `-${skillValue - 30}%`,
+            duration: 1,
+            delay: delayTime,
+          });
+        });
+      });
+
       if (anchorLink == 'profile' && slideAnchor == 'slide1') {
         gsap.to('.wrap-info-text strong', {
           // y: 15,
@@ -148,6 +164,13 @@ $(function () {
       nextSlideIndex
     ) {
       console.log(anchorLink, index, slideIndex, direction, nextSlideIndex);
+
+      const waves = document.querySelectorAll('.wave');
+      waves.forEach((wave) => {
+        gsap.to(wave, {
+          top: '3%',
+        });
+      });
 
       if (slideIndex == 0) {
         gsap.to('.wrap-info-text strong', {

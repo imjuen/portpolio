@@ -268,17 +268,21 @@ main section {
 }
 
 .wrap-info-text2 dl dd {
-  font-family: 'Nanum Pen Script', cursive;
-  font-weight: 400;
-  font-size: 2.5rem;
+  /* font-family: 'Nanum Pen Script', cursive;
+  font-weight: 400; */
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
   color: var(--main2-color);
   opacity: 0;
+  text-transform: none;
+  margin-top: 1rem;
 }
 
 .wrap-info-text2 dl dd b {
-  font-family: 'Nanum Pen Script', cursive;
+  font-family: 'Pretendard', sans-serif;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 
 .info {
@@ -287,137 +291,77 @@ main section {
 }
 
 .info dl {
-  width: 113.2rem;
+  width: 130rem;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 0 7rem;
   align-items: center;
+  column-gap: 5rem;
 }
 
-.info dl dt {
+.circle {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background: #0af;
   position: relative;
-  border: 3px solid var(--main-color);
-  width: 15rem;
-  height: 15rem;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 500;
-  font-size: 2.5rem;
-  color: var(--main2-color);
   overflow: hidden;
-  z-index: 1; /* 글씨를 앞에 배치 */
-}
-
-/* .info dl dt::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 200%;
-  height: 200%;
-  background-color: var(--main-color);
-  border-radius: 50%;
-  animation: wave 2s;
-}
-
-.info dl dt.filled::before {
-  animation-name: fillWater;
-  animation-duration: 5s;
-  animation-timing-function: ease-in;
-  animation-fill-mode: forwards;
-} */
-
-/* .info dl dt {
-  position: relative;
   border: 3px solid var(--main-color);
-  width: 15rem;
-  height: 15rem;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 500;
-  font-size: 2.5rem;
-  color: var(--main2-color);
-  transform: translate3d(0, 0, 0);
-  overflow: hidden;
-  z-index: 1;
 }
 
-.info dl dt::after,
-.info dl dt::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 200%;
-  height: 200%;
-  background: var(--main-color);
-  border-radius: 45%;
-  transform: translateY(100%);
-  transition: transform 2s ease-in-out;
-  z-index: 0;
-  animation: fillwave 5s infinite ease-in-out;
-}
-
-.info dl dt::after {
-  animation-delay: -2.5s;
-}
-
-.info dl dt.filled::before {
-  transform: translateY(20%);
-} */
-
-/* .info dl dt::before {
-  content: '';
-  width: 15rem;
-  height: 15rem;
-  position: absolute;
-  bottom: -20%;
-  left: -30%;
-  border-radius: 45%;
-  background: var(--main-color);
-  animation: move 3s infinite linear;
-} */
-
-/* .info dl dt::before {
-  opacity: 0.4;
+.wave {
   position: absolute;
   top: 3%;
   left: 50%;
-  background: #0af;
-  width: 500px;
-  height: 500px;
-  margin-left: -250px;
+  background: rgb(0, 141, 211);
+  width: 35rem;
+  height: 35rem;
+  margin-left: -168px;
   margin-top: -250px;
   transform-origin: 50% 48%;
+  opacity: 0.4;
   border-radius: 43%;
   animation: drift 3000ms infinite linear;
-} */
-/* .info dl dt::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 200%;
-  height: 80%;
-  background: var(--main-color);
-  border-radius: 35%;
-  transform: translateY(100%);
-  animation: wave 5s ease-in-out infinite;
-  transition: transform 2s ease-in-out;
-  z-index: 0; 
-} */
+}
 
-/* .info dl dt.filled::before {
-  transform: translateY(20%); 
-} */
+.wave.-three {
+  animation: drift 5000ms infinite linear;
+  background: #0af;
+}
+
+.wave.-two {
+  animation: drift 7000ms infinite linear;
+  background: rgb(222, 255, 251);
+}
+
+.info dl dt:nth-of-type(2n) .wave {
+  animation: drift2 3000ms infinite alternate linear;
+}
+.info dl dt:nth-of-type(2n) .wave.-three {
+  animation: drift2 5000ms infinite alternate linear;
+}
+.info dl dt:nth-of-type(2n) .wave.-two {
+  animation: drift2 7000ms infinite alternate linear;
+}
+
+.title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .info dl dd {
   width: 41.6rem;
-  padding: 0 3.5rem;
   font-weight: 400;
   font-size: 2rem;
   color: var(--main2-color);
@@ -468,11 +412,42 @@ main section {
 }
 
 #footer {
-  height: 20vh;
-  line-height: 30rem;
-  background: var(--main3-color);
-  color: #fff;
+  /* background: url(../img/rainbow.jpg) 50% no-repeat; */
+  color: #333;
   text-align: center;
+  padding: 5rem;
+}
+
+.wrap-con {
+  width: 100rem;
+  margin: 5rem auto 3rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+#footer h3 {
+  font-weight: 500;
+  font-size: 10rem;
+}
+
+#footer p {
+  font-weight: 300;
+  font-size: 7rem;
+}
+
+#footer ul {
+  margin-left: 5rem;
+}
+#footer li {
+  font-weight: 300;
+  font-size: 3rem;
+  padding: 3rem 0;
+}
+#footer li b {
+  margin-left: 3rem;
+  text-transform: none;
 }
 
 @keyframes shake-lr {
@@ -509,15 +484,6 @@ main section {
   }
 }
 
-/* @keyframes fillWater {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 100%;
-  }
-} */
-
 @keyframes kenburns-top {
   0% {
     -webkit-transform: scale(1) translateY(0);
@@ -533,22 +499,6 @@ main section {
   }
 }
 
-/* @keyframes wave {
-  0%,
-  100% {
-    transform: translateX(-50%) translateY(100%);
-  }
-  50% {
-    transform: translateX(50%) translateY(95%);
-  }
-} */
-
-@keyframes move {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes drift {
   from {
     transform: rotate(0deg);
@@ -557,23 +507,11 @@ main section {
     transform: rotate(360deg);
   }
 }
-
-@keyframes wave {
-  0%,
-  100% {
-    transform: translateX(-50%) translateY(0) scale(1.3);
+@keyframes drift2 {
+  from {
+    transform: rotate(0deg);
   }
-  50% {
-    transform: translateX(-50%) translateY(-25%) scale(0.8);
-  }
-}
-
-@keyframes fillWater {
-  0%,
-  100% {
-    transform: translateX(-50%) translateY(100%) scale(0.8);
-  }
-  50% {
-    transform: translateX(-50%) translateY(0) scale(1);
+  from {
+    transform: rotate(480deg);
   }
 }
