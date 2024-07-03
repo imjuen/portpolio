@@ -1,36 +1,38 @@
 $(function () {
-  const $header = $('#header');
-  const TL = gsap.timeline();
+  $('.video video').on('ended', function () {
+    $('.btn-process').fadeIn();
+    const $header = $('#header');
+    const TL = gsap.timeline();
 
-  TL.from('.gnb li ', {
-    y: -100,
-    autoAlpha: 0,
-    duration: 0.5,
-    stagger: 0.2,
-  });
-  TL.from(
-    '.logo',
-    {
+    TL.from('.gnb li ', {
       y: -100,
       autoAlpha: 0,
-      duration: 0.5,
-      ease: 'bounce.out',
-      // delay: 1,
-    },
-    '+=0.5 '
-  );
+      duration: 1,
+      stagger: 0.2,
+    });
+    TL.from(
+      '.logo',
+      {
+        y: -100,
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: 'bounce.out',
+        // delay: 1,
+      },
+      '+=0.5 '
+    );
+  });
 
   $('#fullpage').fullpage({
     menu: '.gnb',
-    anchors: ['visual', 'profile', 'project', 'process', 'contact'],
+    anchors: ['visual', 'profile', 'project', 'contact'],
 
     scrollingSpeed: 1000,
 
     // 섹션 영여의 콘텐츠 세로 정렬
     verticalCentered: false,
 
-    autoScrolling: true,
-    loopHorizontal: true,
+    bigSectionsDestination: 'top',
 
     // 영역에 진입한 후
     afterLoad: function (anchorkLink, index) {
@@ -41,34 +43,17 @@ $(function () {
         gsap.to('.wrap ul', {
           opacity: 1,
           y: 100,
-          duration: 2,
+          duration: 1,
           ease: 'power2.out',
           // stagger: 0.1,
         });
       }
-
-      // if (anchorkLink === 'process') {
-      //   $('.logo a').css('color', 'var(--main3-color)');
-      //   $('.gnb li a ').css('color', 'var(--main3-color)');
-      //   $('.gnb li a:hover').css('color', 'var(--main2-color)');
-      // }
-
-      if (anchorkLink === 'process') {
-        $('#header').addClass('active');
-      }
-      if (anchorkLink === 'process') {
-        $('.logo').addClass('active');
-        $('.logo:hover').addClass('active');
-      }
-      if (anchorkLink === 'process') {
-        $('.gnb li a').addClass('active');
-        $('.gnb li a:hover').addClass('active');
-      }
-
-      if (anchorkLink === 'contact') {
-        $header.fadeOut();
-      } else {
-        $header.fadeIn();
+      if (anchorkLink === 'profile') {
+        gsap.to('.wrap-info-text strong', {
+          autoAlpha: 1,
+          duration: 2,
+          ease: 'power4.out',
+        });
       }
     },
 
@@ -80,25 +65,17 @@ $(function () {
         gsap.to('.wrap ul', {
           opacity: 0,
           y: -100,
-          duration: 2,
+          duration: 1,
           ease: 'power2.out',
           // stagger: 0.1,
         });
       }
-
-      // if (index === 4) {
-      //   $('.logo a').css('color', 'var(--main-color)');
-      //   $('.gnb li a').css('color', 'var(--main-color)');
-      // }
-
-      if (index === 4) {
-        $('#header').removeClass('active');
-        $('.logo').removeClass('active');
-        $('.logo:hover').addClass('active');
-      }
-      if (index === 4) {
-        $('.gnb li a').removeClass('active');
-        $('.gnb li a:hover').addClass('active');
+      if (index === 2) {
+        gsap.to('.wrap-info-text strong', {
+          autoAlpha: 0,
+          duration: 3,
+          ease: 'power4.out',
+        });
       }
     },
 
@@ -124,22 +101,29 @@ $(function () {
 
       if (anchorLink == 'profile' && slideAnchor == 'slide1') {
         gsap.to('.wrap-info-text strong', {
-          // y: 15,
           autoAlpha: 1,
-          duration: 3,
+          duration: 2,
           ease: 'power4.out',
         });
       }
       if (anchorLink == 'profile' && slideAnchor == 'slide2') {
         gsap.to('.wrap-info-text2 dl dd', {
           autoAlpha: 1,
-          duration: 2,
+          duration: 1.5,
           ease: 'power2.in',
+        });
+      }
+      if (anchorLink == 'profile' && slideAnchor == 'slide2') {
+        gsap.to('.wrap-text h4', {
+          x: 240,
+          autoAlpha: 1,
+          duration: 1,
+          ease: 'power1.out',
         });
       }
       if (anchorLink == 'profile' && slideAnchor == 'slide3') {
         gsap.to('.info dl dd', {
-          x: 5,
+          x: 20,
           autoAlpha: 1,
           duration: 1,
           ease: 'power2.out',
@@ -152,7 +136,7 @@ $(function () {
       $('.menu > li').removeClass('on').eq(slideIndex).addClass('on');
 
       // 슬라이드 번호 표시
-      $('.slide-num').text(slideIndex + 1);
+      $('.slide-num').text(`0${slideIndex + 1}.`);
     },
 
     // 슬라이드 영역에 떠나갈 때
@@ -163,7 +147,7 @@ $(function () {
       direction,
       nextSlideIndex
     ) {
-      console.log(anchorLink, index, slideIndex, direction, nextSlideIndex);
+      // console.log(anchorLink, index, slideIndex, direction, nextSlideIndex);
 
       const waves = document.querySelectorAll('.wave');
       waves.forEach((wave) => {
@@ -174,7 +158,6 @@ $(function () {
 
       if (slideIndex == 0) {
         gsap.to('.wrap-info-text strong', {
-          // y: -15,
           autoAlpha: 0,
           duration: 3,
           ease: 'power4.out',
@@ -195,6 +178,16 @@ $(function () {
           ease: 'power2.out',
         });
       }
+
+      if (slideIndex == 1) {
+        gsap.to('.wrap-text h4', {
+          x: -5,
+          autoAlpha: 0,
+          duration: 1,
+          ease: 'power1.out',
+        });
+      }
+
       $('.info dl dt').removeClass('filled');
     },
   });

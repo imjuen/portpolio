@@ -19,7 +19,22 @@ main section .mouse {
 
 .inner {
   width: 172rem;
+  height: 100%;
   margin: 0 auto;
+  border: 1px solid #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrap-info4 {
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  transform: translateY(-50%);
+  border: 1px solid #00f;
+  margin: 8.2rem 5rem;
 }
 
 h1 {
@@ -54,8 +69,10 @@ dl dd {
 
 .wrap-img {
   position: absolute;
-  top: 11.5rem;
-  right: 6rem;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  border: 1px solid #f00;
 }
 
 .wrap-img ul li {
@@ -66,23 +83,6 @@ dl dd {
 .wrap-img ul li figure {
   width: 100%;
   height: 100%;
-}
-
-.wrap-img2 {
-  position: absolute;
-  top: 0;
-  right: 6rem;
-}
-
-.wrap-img2 ul li {
-  width: 85rem;
-  height: 91.8rem;
-}
-
-.wrap-img2 ul li figure {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
 }
 
 .menu {
@@ -110,10 +110,9 @@ dl dd {
 }
 
 .menu1 {
-  margin: 10rem 0 0 4rem;
-  display: flex;
-  justify-content: space-between;
-  width: 33rem;
+  margin: 10rem 10rem 0;
+  /*display:block*/ /*display:flex*/
+  width: 17rem;
 }
 
 .menu1 li {
@@ -149,7 +148,7 @@ main section:last-child {
 .main-slider {
   position: absolute;
   top: 42%;
-  right: 10rem;
+  right: 8%;
   width: 150rem;
   height: 42rem;
   /* border: 1px solid #f00; */

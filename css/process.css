@@ -1,0 +1,19 @@
+.process-img {
+  width: 100%;
+  height: 646px;
+  /* border: 1px solid #f00; */
+}
+.process-img figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.process {
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+.process figure img {
+  width: 100%;
+  /* border: 1px solid #000; */
+}

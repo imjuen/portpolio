@@ -18,13 +18,6 @@ $(function () {
         $('body').css('background', 'none');
       }
 
-      // if (anchorkLink === 'Graphic-design') {
-      //   $('body').css(
-      //     'background',
-      //     'url(img/slider-img.png) no-repeat 100% 170% / contain'
-      //   );
-      // }
-
       AOS.init();
       $aniEl.addClass('aos-animate');
     },
@@ -46,13 +39,6 @@ $(function () {
 
     afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
       console.log(anchorLink, index, slideAnchor, slideIndex);
-
-      //   if (anchorLink == 'Graphic-design' && slideAnchor == 'slide0') {
-      //     $gallery.on('click', function () {
-      //       $dim.fadeIn();
-      //       $popup.addClass('active');
-      //     });
-      //   }
     },
   });
 
