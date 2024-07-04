@@ -71,5 +71,5 @@ body {
 
   pointer-events: none;
   user-select: none;
-  z-index: 2;
+  z-index: 10001;
 }

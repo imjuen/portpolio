@@ -21,7 +21,6 @@ main section .mouse {
   width: 172rem;
   height: 100%;
   margin: 0 auto;
-  border: 1px solid #000;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,7 +32,6 @@ main section .mouse {
   top: 40%;
   left: 0%;
   transform: translateY(-50%);
-  border: 1px solid #00f;
   margin: 8.2rem 5rem;
 }
 
@@ -72,7 +70,6 @@ dl dd {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  border: 1px solid #f00;
 }
 
 .wrap-img ul li {
@@ -83,6 +80,57 @@ dl dd {
 .wrap-img ul li figure {
   width: 100%;
   height: 100%;
+}
+
+.wrap-img1 {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.wrap-img1 ul li {
+  width: 85rem;
+  height: 75rem;
+}
+
+.wrap-img1 ul li figure {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap-img2 {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.wrap-img2 ul li {
+  width: 85rem;
+  height: 75rem;
+}
+
+.wrap-img2 ul li figure {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap-img3 ul li {
+  width: 85rem;
+  height: 75rem;
+}
+
+.wrap-img3 ul li figure {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap-img3 {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }
 
 .menu {
@@ -110,7 +158,7 @@ dl dd {
 }
 
 .menu1 {
-  margin: 10rem 10rem 0;
+  margin: 10rem 12rem 0;
   /*display:block*/ /*display:flex*/
   width: 17rem;
 }
@@ -240,6 +288,14 @@ main section:last-child {
   height: 5rem;
   border: none;
   background: url(../img/nextr.svg) no-repeat 50%;
+}
+
+.lb-dataContainer {
+  pointer-events: none;
+}
+
+.lb-data .lb-details {
+  display: none;
 }
 
 @keyframes shake-vertical {
